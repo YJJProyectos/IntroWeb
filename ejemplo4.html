@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Title of the document</title>
+		<link rel="stylesheet" href="general.css">
+		<script src="js1.js"></script>	
+	</head>
+	<body>
+		Campo texto1: <input type="text" name="campoTexto1" size="20"><br>
+		Campo texto2: <input type="text" name="campoTexto2" placeholder="Marca de agua.."><br>
+		Campo texto3: <input type="text" name="campoTexto3" value="hola a todos"><br>
+		Campo numero1: <input type="number" name="campoNumero1" value="1234"><br>
+		Campo clave: <input type="password" name="campoClave"><br>
+		Campo hidden: <input type="hidden" name="campoHidden" value="1234"><br>
+		Texto largo: <textarea name="campoTextoLargo" rows="5" cols="14"></textarea><br>
+		Selector:
+		<select name="selector1">
+			<option value="verde">Color verde</option>
+			<option value="rojo">Color rojo</option>
+			<option value="azul">Color azul</option>
+		</select><br>
+
+		Selector2:
+		<select name="selector2" multiple="true">
+			<option value="verde">Color verde</option>
+			<option value="rojo">Color rojo</option>
+			<option value="azul">Color azul</option>
+		</select><br>		
+		Check1: <input type="checkbox" name="campoCheck" value="1">
+		Check2: <input type="checkbox" name="campoCheck" value="2">
+		Check3: <input type="checkbox" name="campoCheck" value="3">
+		<br>
+		Radio1: <input type="radio" name="campoRadio" value="1">
+		Radio2: <input type="radio" name="campoRadio" value="2">
+		Radio3: <input type="radio" name="campoRadio" value="3">
+		<br>
+		<button type="button" onclick="clickBoton()">Verificar radio</button>
+		<div id="radioValor"></div>
+	</body>
+	</head>
+</html>
