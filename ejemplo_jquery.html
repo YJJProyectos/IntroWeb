@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Ejemplo jQuery</title>
+		<script src="jquery-3.2.1.js"></script>
+		<script src="ejemplo_jquery.js"></script>
+		<script src="calculadora.js"></script>
+	</head>
+	<body>
+		<div id="div"></div>
+		Numero 1 <input type="text" name="campo1" id="campo1" required><br>
+		Numero 2 <input type="text" name="campo2" id="campo2" required><br>
+		
+		Operacion
+		<select name="operacion" id="operacion">
+			<option value="suma">suma</option>
+			<option value="resta">resta</option>
+			<option value="dividir">dividir</option>
+			<option value="multiplicar">multiplicar</option>
+		</select><br>			
+		
+		<button type="button" onclick="eventoClickCalculadora()">Calcular</button>
+		<button type="button" id="botonCalcular">Boton calcular</button>
+		<div id="resultado"></div>		
+
+		<!-- tabla, numero producto, descripcion , precio -->
+		<!-- crear 2 ejemplos de eso -->
+		<table>
+			<tr> <!-- filas -->
+				<th>Nro producto</th> <!-- titulo -->
+				<th>Descripcion</th> 
+				<th>Precio</th>
+			</tr>
+			<tr>
+				<td>1</td> <!-- filas de las columnas de la tabla-->
+				<td>Juguete</td>
+				<td>1000</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Escoba</td>
+				<td>1500</td>
+			</tr>
+		</table> <!-- tabla -->	
+	</body>
+</html>	

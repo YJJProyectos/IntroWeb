@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Ejemplo jQuery</title>
+		<script src="jquery-3.2.1.js"></script>
+		<script src="ejemplo_jquery2.js"></script>
+	</head>
+	<body>
+
+<!-- tabla, numero producto, descripcion , precio -->
+		<!-- crear 2 ejemplos de eso -->
+	<!-- agregar un boton y cada vez que clickee a la tabla, y agregar producto al tocar boton -->
+	<!-- boton que borre el primer tr-->
+	<!--boton que pinte en rojo, todas las filas pares -->
+	<!-- Agregar productos desde campos, cada vez limpiar los campos -->
+		<table id="tabla" border="1">
+			<tr> <!-- filas -->
+				<th>Nro producto</th> <!-- titulo -->
+				<th>Descripcion</th> 
+				<th>Precio</th>
+			</tr>
+			<tr class="row-producto">
+				<td>1</td> <!-- filas de las columnas de la tabla-->
+				<td>Juguete</td>
+				<td>1000</td>
+			</tr>
+			<tr class="row-producto">
+				<td>2</td>
+				<td>Escoba</td>
+				<td>1500</td>
+			</tr>
+		</table> <!-- tabla -->	
+		<br>
+		Numero: <input type="text" id="campNro">
+		Descripcion: <input type="text" id="campDesc">
+		Precio: <input type="text" id="campPrecio">
+		<br>
+		<button type="button" id="botonTabla">Agregar Elemento</button>
+		<button type="button" id="botonRemover">Borrar primer elemento</button>
+		<button type="button" id="botonEsconder">Esconder/Mostrar primer elemento</button>		
+		<button type="button" id="botonPintar">Pintar rojo filas pares</button>
+		<button type="button" id="botonAgregar">Agregar producto de los campos</button>
+	</body>
+</html>	
