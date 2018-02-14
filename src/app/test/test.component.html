@@ -1,0 +1,6 @@
+<div *ngFor="let persona of personas">
+  <p>{{persona.name}} {{persona.lastName}} con ID: {{persona.id}}
+  </p>
+</div>
+<br>
+<button type="button" (click)="pasarDatos()">Mostrar datos / No mostrar datos</button>
