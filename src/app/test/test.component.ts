@@ -11,6 +11,7 @@ import { PersonaService } from '../persona.service';
 export class TestComponent implements OnInit {
   
   personas : Persona[];
+  cosas : Boolean;
   
   constructor(
     private personaService: PersonaService
@@ -28,8 +29,10 @@ export class TestComponent implements OnInit {
   pasarDatos(): void {
     if (this.personas != null){
       this.personas = null;
+      this.cosas = false;
     } else {
       this.getPersonas();
+      this.cosas = true;
     }
   }
   

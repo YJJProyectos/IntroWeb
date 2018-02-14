@@ -18,6 +18,9 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { TestComponent } from './test/test.component';
 import { PersonaService } from './persona.service';
+import { MapaComponent } from './mapa/mapa.component';
+
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import { PersonaService } from './persona.service';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    TestComponent
+    TestComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,10 @@ import { PersonaService } from './persona.service';
     HttpClientModule,
     HttpModule,
     AppRoutingModule,
+    AgmCoreModule.forRoot({
 
+      apiKey: 'AIzaSyCNdj9OjyXAKGT6IAFN0-AT11csbDVt1SA'
+    }),
 
   //  HttpClientModule,
 
