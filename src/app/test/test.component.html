@@ -1,9 +1,58 @@
-<div *ngFor="let persona of personas">
-  <p>{{persona.name}} {{persona.lastName}} con ID: {{persona.id}}
-  </p>
-</div>
 <br>
+
+<ul class="personas">
+  <li *ngFor="let persona of personas">
+    <a (click)="edit(persona)">
+      <span class="badge">{{ persona.id || -1 }}</span>
+    <!-- <p>{{persona.name}} {{persona.lastName}} con ID: {{persona.id}}
+    </p> -->
+     <span *ngIf="persona!==editPersona">{{persona.name}} -> {{persona.lastName}} </span>
+     <input *ngIf="persona===editPersona" [(ngModel)]="persona.name"
+       (blur)="update()" (keyup.enter)="update()">
+    </a>
+    <button class="delete" title="delete persona"
+    (click)="delete(persona)">x</button>
+  </li>
+
+</ul>
+
 <button type="button" (click)="pasarDatos()">Mostrar datos / No mostrar datos</button>
+<br><br>
+<div>
+  <label>Persona:
+    <input #persona />
+  </label> 
+  <button (click)="add(persona.value)">
+    Agregar persona
+  </button>
+</div>
 <div *ngIf="cosas">
   <p>Tiene elementos</p>
 </div>
+
+<div class="container">
+  <h1>Angular 2 + Google Maps Places Autocomplete</h1>
+  <div class="form-group">
+    <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
+  </div>
+  <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="true" [zoom]="zoom">
+    <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+  </agm-map>
+</div>
+
+
+<h3>Upload file</h3>
+<!-- <form enctype="multipart/form-data" method="post"> -->
+  <div>
+    <!-- <label for="picked">Choose file to upload</label> -->
+    <div>
+      <input type="file" id="picked" #picked
+        (change)="onPicked(picked)">
+    </div>
+  </div>
+  <!-- <p *ngIf="message">{{message}}</p> -->
+<!-- </form> -->
+
+
+
+<!-- <div id="map" style="width: 300px; height: 300px;"> </div> -->
