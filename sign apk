@@ -1,0 +1,9 @@
+1.    Remover  consola de desarrollo: cordova plugin rm org.apache.cordova.console ( no siempre es necesario pero no está de más)
+2.    Generar apk: `cordova build android --release` . Se crea el archivo **android-release-unsigned.apk** en el directorio: directoriodetuapp/platforms/android/build/outputs/apk/
+3.    Generar Key: `keytool -genkey -v -keystore nombredetuapp-key.keystore -alias nombredetuapp -keyalg RSA -keysize 2048 -validity 10000`   genera archivo **nombredetuapp-key.keystore**
+4.    Recuerda anotar la clave usada para generar  key :grin:
+5.    Copiar archivo en el mismo directorio que el apk del paso 2:  directoriodetuapp/project/platforms/android/build/outputs/apk/
+6.    Situarse en el directorio anterior y ejecutar **jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore nombredetuapp-key.keystore android-release-unsigned.apk nombredetuapp**
+7.    Alinear apk: `zipalign -v 4 android-release-unsigned.apk nombredetuapp.apk`
+8.    Genera apk valido con el nombre: **nombredetuapp.apk**
+9.    Subir a Google Play primero como version Beta luego pasar a Prod.
